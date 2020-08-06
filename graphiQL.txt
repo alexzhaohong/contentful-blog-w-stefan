@@ -1,0 +1,24 @@
+query	{
+  person(id:"6ZaEyMagIZ0K3GGiiP8H9k") {
+    name
+    age
+  }
+  
+  personCollection(where: {
+    AND: [
+      {name_contains: "Alex"},
+      {age: 24}
+    ]
+  }) {
+    items {
+      name
+    }
+  }
+  assetCollection{
+    items{
+      sys{
+        id
+      }
+    }
+  }
+}
